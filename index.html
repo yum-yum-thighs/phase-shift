@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#121715">
+  <title>Phase Shift — A matter of perspective</title>
+  <meta name="description" content="A three-room particle puzzle. Pour, float and freeze the same body of matter.">
+  <meta property="og:title" content="Phase Shift — change what you are">
+  <meta property="og:description" content="A playable AI-assisted particle puzzle prototype.">
+  <meta property="og:image" content="https://yum-yum-thighs.github.io/phase-shift/verification/browser-desktop.png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="masthead">
+      <a class="brand" href="./" aria-label="Phase Shift home"><span class="brand-icon">◈</span> PHASE<span>SHIFT</span><small>THE MATTER LAB</small></a>
+      <div class="header-right"><span class="status-dot"></span> THREE EXPERIMENTS <button id="help" class="help-button" aria-label="How to play">?</button><button id="sound" class="icon-button" aria-label="Enable sound" title="Toggle sound">♪ <span>SOUND OFF</span></button></div>
+    </header>
+    <section class="intro">
+      <div><div class="eyebrow">REAL MOTION. SAME MATTER.</div><h1>A matter of <em>perspective.</em></h1><p>Pour it. Disperse it. Freeze it in motion. One body. Three ways through.</p></div>
+      <div class="experiment-note"><span>FIELD NOTES / 01</span>When the path won’t change,<br><strong>change what you are.</strong><svg viewBox="0 0 100 35" aria-hidden="true"><path d="M4 8 Q45 35 90 12 M77 10 L92 12 L85 25"/></svg></div>
+    </section>
+    <section class="game-shell" aria-label="Phase Shift game">
+      <div class="game-toolbar"><div class="room"><span id="room-number">01</span><div><small id="room-category">THE BASICS</small><strong id="room-title">Light as air</strong></div></div><div id="room-tabs" class="room-tabs" aria-label="Select a room"></div><div class="toolbar-actions"><span id="collected">✧ 0 / 3</span><button id="hint" title="Room hint (H)" aria-label="Show room hint">?</button><button id="restart" title="Restart room (R)" aria-label="Restart room">↻</button><button id="pause" title="Pause (Escape)" aria-label="Pause game">Ⅱ</button><button id="fullscreen" title="Fullscreen" aria-label="Toggle fullscreen">⛶</button></div></div>
+      <div class="canvas-wrap"><canvas id="game" width="1280" height="680" tabindex="0" aria-label="Particle physics puzzle. Drag matter to stir it. A and D or arrows steer. E cycles phase. 1 solid, 2 liquid, 3 gas. Space jumps, slides, splashes or puffs. R restarts. Escape pauses."></canvas><div class="canvas-vignette"></div><div class="room-caption"><span id="caption-step">01 / OBSERVE & ADAPT</span><p id="caption">That wall looks tall. Try becoming something lighter.</p></div><div id="toast" class="toast" role="status" aria-live="polite"></div><div id="overlay" class="overlay" hidden><div class="overlay-card"><span class="eyebrow" id="overlay-kicker">EXPERIMENT COMPLETE</span><h2 id="overlay-title">Beautifully done.</h2><p id="overlay-body">A new perspective unlocked.</p><button id="overlay-action">NEXT ROOM <span>→</span></button></div></div></div>
+      <div class="control-deck"><div class="phase-selector" aria-label="Choose your phase"><button class="phase active" data-phase="solid"><span class="phase-symbol solid-symbol">◇</span><span><strong>SOLID</strong><small>Hold your shape</small></span><kbd>1</kbd></button><button class="phase" data-phase="liquid"><span class="phase-symbol liquid-symbol">◒</span><span><strong>LIQUID</strong><small>Find the gaps</small></span><kbd>2</kbd></button><button class="phase" data-phase="gas"><span class="phase-symbol gas-symbol">☁</span><span><strong>GAS</strong><small>Rise above it</small></span><kbd>3</kbd></button></div><div class="cycle-hint"><kbd>E</kbd><span>CYCLE<br>PHASE</span></div></div>
+    <div class="touch-controls" aria-label="Touch controls"><button data-control="left" aria-label="Move left">←</button><button data-control="right" aria-label="Move right">→</button><button data-control="down" aria-label="Descend">↓</button><button id="touch-cycle">PHASE ↻</button><button data-control="action">IMPULSE</button></div>
+    </section>
+    <footer class="game-footer"><div class="keyboard-guide"><span><kbd>←</kbd><kbd>→</kbd> or <kbd>A</kbd><kbd>D</kbd> steer</span><span><kbd>SPACE</kbd> jump / splash / puff</span><span>Drag to stir</span><span><kbd>↓</kbd> descend</span><span><kbd>R</kbd> restart</span></div><span class="footer-note">THINK FLUIDLY. <span>✧</span></span></footer>
+
+    <section class="field-guide"><div class="guide-heading"><span class="eyebrow">KNOW YOUR MATTER</span><p>A body made of motion.</p></div><article><span class="guide-index">01 /</span><h3>Freeze this moment.</h3><p>Solid bonds lock the current arrangement. Ice keeps its shape, rotates on impact, and carries momentum. A shallow puddle makes shallow ice.</p></article><article><span class="guide-index">02 /</span><h3>Let it flow.</h3><p>Liquid particles push apart, share momentum, and pull together. They pour off ledges, splash, and collect in trays. Space makes a splash.</p></article><article><span class="guide-index">03 /</span><h3>Become the atmosphere.</h3><p>Gas expands into turbulent vapor. Individual particles rise and drift around terrain. Press down to descend, or Space for a puff.</p></article></section>
+    <nav class="project-links" aria-label="Project links"><span>AN AI-ASSISTED GAMEPLAY PROTOTYPE</span><a href="https://github.com/yum-yum-thighs/phase-shift">Source &amp; project notes ↗</a><a href="https://yum-yum-thighs.github.io/stickslap/">Try StickSlap ↗</a></nav>
+    <dialog id="help-dialog" aria-labelledby="help-title"><form method="dialog"><button class="dialog-close" aria-label="Close instructions">×</button><span class="eyebrow">OBSERVE. ADAPT. EXPERIMENT.</span><h2 id="help-title">One body. Three possibilities.</h2><p>Reach the glowing exit. The three sparks in each room are optional.</p><ul><li><strong>Gas / 3:</strong> rise over walls. Hold down to descend.</li><li><strong>Liquid / 2:</strong> flow through blue grates and settle in trays.</li><li><strong>Solid / 1:</strong> freeze your current arrangement. Shallow water makes shallow ice.</li></ul><p>A / D or arrows steer. Space jumps, splashes or puffs. Drag matter to stir it. E cycles phase; R resets; Escape pauses. On touch screens, use the controls below the scene.</p><p>The room hint explains one possible route. There is no timer or penalty for trying.</p><button class="dialog-done">GOT IT</button></form></dialog>
+  </main>
+  <script type="module" src="main.mjs"></script>
+</body>
+</html>
